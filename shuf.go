@@ -8,7 +8,7 @@ import (
 )
 
 // Shuffle takes a slice of strings and writes them
-// out in random order using field-yates
+// out in random order using fisher-yates shuffle
 func Shuffle(in []string, out io.Writer) {
 	w := bufio.NewWriter(out)
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
